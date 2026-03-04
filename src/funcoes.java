@@ -41,6 +41,16 @@ public class funcoes {
     public void visualizar(ArrayList<filme> listafilme) {
         for (filme filme: listafilme) {
             System.out.println(filme.getTodos());
+            scanner.nextLine();
         }
     }
+    public void deletar(ArrayList<filme> filme) {
+        System.out.println("Digite o índice do filme que deseja remover:");
+        int index = scanner.nextInt();
+        scanner.nextLine();
+
+        filme.remove(index);
+        System.out.println("Filme removido!");
+    }
+
 }
