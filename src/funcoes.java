@@ -52,5 +52,12 @@ public class funcoes {
         filme.remove(index);
         System.out.println("Filme removido!");
     }
+    public void editar(ArrayList<filme> listaFilmes){
+        System.out.println("Digite o índice do filme que deseja editar:");
+        int index = scanner.nextInt();
+        scanner.nextLine();
 
+        listaFilmes.remove(index);
+
+    }
 }

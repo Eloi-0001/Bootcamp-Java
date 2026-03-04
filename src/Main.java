@@ -36,8 +36,17 @@ public class Main {
 
                     menu.deletar(listaFilmes);
                     break;
+                case 3:
+
+                    menu.editar(listaFilmes);
+                    menu.adicionar(listaFilmes);
+                    menu.visualizar(listaFilmes);
+                    System.out.println("Filme editado com sucesso!");
+                case 5:
+                default:
+                    System.out.println("Opção inválida! Digite um número entre 1 e 5.");
             }
 
-            }
+        }
     }
 }
