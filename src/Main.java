@@ -5,12 +5,15 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
 
+
     public static void main(String[] args) {
+    funcoes menu = new funcoes();
 
     filme primeiroFilme = new filme("Avengers End Game","Anthony Russo e Joe Russo",2019,"Ação",03.01,"12", 30.00,false);
 
     ArrayList<filme> listaFilmes = new ArrayList<filme>();
     listaFilmes.add(primeiroFilme);
+
 
 
      System.out.println("Bem vindo(a) a locadora AmazingMovies!!!\n" +
@@ -19,6 +22,19 @@ public class Main {
         System.out.print("Oque deseja fazer?:");
             int escolha = scanner.nextInt();
 
-            System.out.println(escolha);
+            switch (escolha) {
+                case 1:
+
+                    menu.adicionar(listaFilmes);
+
+                    menu.visualizar(listaFilmes);
+                    break;
+                case 2:
+
+                    menu.visualizar(listaFilmes);
+                    break;
+            }
+
+
     }
 }
