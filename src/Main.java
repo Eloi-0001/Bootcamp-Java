@@ -18,7 +18,11 @@ public class Main {
 
      System.out.println("Bem vindo(a) a locadora AmazingMovies!!!\n" +
              "Por favor, escolha o serviço desejado \n(1-Adicionar 2-Visualizar 3-Editar 4-Deletar 5-Sair)");
-        while (true){
+
+     int contador = 0;
+
+     while (contador == 0) {
+
         System.out.print("Oque deseja fazer?:");
             int escolha = scanner.nextInt();
 
@@ -27,26 +31,28 @@ public class Main {
 
                     menu.adicionar(listaFilmes);
                     menu.visualizar(listaFilmes);
-
+                    break;
                 case 2:
 
                     menu.visualizar(listaFilmes);
                     break;
-                case 4:
-
-                    menu.deletar(listaFilmes);
-                    break;
                 case 3:
-
                     menu.editar(listaFilmes);
                     menu.adicionar(listaFilmes);
                     menu.visualizar(listaFilmes);
                     System.out.println("Filme editado com sucesso!");
+                    break;
+
+                case 4:
+                    menu.deletar(listaFilmes);
+                    break;
                 case 5:
+                    System.out.println("Muito obrigado pode ter visitado nosso site!!. Por favor, volta sempre!!");
+                    contador ++;
+                    break;
                 default:
                     System.out.println("Opção inválida! Digite um número entre 1 e 5.");
             }
-
         }
     }
 }
